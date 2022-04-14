@@ -26,31 +26,43 @@ span {
     flex-direction: column;
     width: 75vw;
     margin: 10px auto;
-    border: 2px solid red;
 }
 
 #category-row {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    border: 2px solid orange;
 }
 
 #clue-board {
     flex-direction: column;
-    border: 2px solid blue;
 }
 
 .clue-row {
     display: flex;
-    border: 2px solid orange;
 }
 
 .clue-box {
     display: flex;
-    border: 2px solid green;
+    align-items: center; /*vertical*/
+    justify-content: center; /*horizontal*/
+    border: 2px solid white;
+    background-color: blue;
+    color: white;
     border-radius: 5px;
     margin: 5px;
+    font-size: 2rem;
+    font-weight: bold;
     height: 100px;
     flex: 1;
+    text-transform: uppercase;
+}
+
+.category-box {
+    font-size: .8rem;
+    line-height: 25px;
+}
+
+.clicked-box {
+    font-size: 1rem;
 }
