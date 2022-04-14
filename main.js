@@ -37,6 +37,50 @@ function initBoard() {
     }
 }
 
+function randInt() {
+    return Math.floor(Math.random() * (18418) + 1)
+}
+
+function buildCategories () {
+
+    const fetchReq1 = fetch(
+        `https://jservice.io/api/category?&id=${randInt()}`
+    ).then((res) => res.json());
+
+    const fetchReq2 = fetch(
+        `https://jservice.io/api/category?&id=${randInt()}`
+    ).then((res) => res.json());
+
+    const fetchReq3 = fetch(
+        `https://jservice.io/api/category?&id=${randInt()}`
+    ).then((res) => res.json());
+
+    const fetchReq4 = fetch(
+        `https://jservice.io/api/category?&id=${randInt()}`
+    ).then((res) => res.json());
+
+    const fetchReq5 = fetch(
+        `https://jservice.io/api/category?&id=${randInt()}`
+    ).then((res) => res.json());
+
+    const fetchReq6 = fetch(
+        `https://jservice.io/api/category?&id=${randInt()}`
+    ).then((res) => res.json());
+
+    const allData = Promise.all([fetchReq1,fetchReq2,fetchReq3,fetchReq4,fetchReq5,fetchReq6])
+
+    allData.then((res) => {
+        console.log(res)
+    })
+
+}
+
+
+
+
+
+
+
 function getClue () {
     console.log('have a nice day')
 }
